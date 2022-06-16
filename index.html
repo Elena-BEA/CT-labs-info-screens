@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Info-screens-proto.css" media="screen"> 
+    <title>CT-labs info-screen</title>
+  </head>
+  <body id="body">
+    
+    <img width="400" id="slide" src="Home.png'" alt="slideshow">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <button type="button" onclick="init()">Start</button>
+    <div id="cam_container" style="bottom: -50px;"><canvas id="canvas" style="clip-path: circle(150px at center);"></canvas></div>
+    <div id="label-container"></div>
+
+    <div class="position-absolute start-50 translate-middle" style="bottom: 3%;">
+        <div class="progress" style="height: 20px; width: 100px;">
+          <div class="progress-bar progress-bar-striped text-warning" style="min-width: 0px;" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div id="label-container"></div>
+      
+      <div class="spinner-border text-warning" role="status" style="visibility: hidden;">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- <style>
+      .body{
+        position: relative;
+      }
+    .slide{
+        position: absolute;
+      }
+    .loader {
+      margin-top: 10px;
+      border: 10px solid #EAF0F6;
+      border-radius: 50%;
+      border-top: 10px solid #FF7A59;
+      width: 50px;
+      height: 50px;
+      animation: spinner 2s linear infinite;
+      
+    }
+
+    @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    </style> -->
+
+
+
+    <!-- <div id="myCarousel" class="carousel slide" data-bs-interval="false" >
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="1">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="images/flame-teamwork.gif" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+
+    
+        </div>
+        <div class="carousel-item" id="2">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+    
+        </div>
+        <div class="carousel-item" id="3">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+    
+        </div>
+      </div>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js.js"></script> 
+  </body>
+</html>

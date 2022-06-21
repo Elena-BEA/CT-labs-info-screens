@@ -74,6 +74,8 @@ async function init() {
 
     labelContainer = document.getElementById("label-container");
     slide = document.getElementById("slide");
+    arm = document.getElementById("arm");
+    arm2 = document.getElementById("arm2");
     bar = document.querySelector(".progress-bar");
     
     // append/get elements to the DOM
@@ -189,6 +191,16 @@ async function predict() {
                 bar.innerText = "home";
                 console.log(`home, ${slideIndex}`);
                 break;
+       }
+
+       if(slideIndex == 0){
+        arm.setAttribute("src", "./images/robot-arm.gif");
+        arm2.setAttribute("src", "./images/robot-arm.gif");
+       } 
+       else 
+       {
+        arm.setAttribute("src", " ");
+        arm2.setAttribute("src", " ");
        }
 
        if(slideIndex == 6 && prediction == "Right") slideIndex = 0;

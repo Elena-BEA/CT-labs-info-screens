@@ -22,4 +22,21 @@ img{
     
 }
 
+.armleft {
+    position: absolute;
+    transform: rotate(60deg);
+    width: 400px;
+    height: 500px;
+    bottom: 0;
+}
+
+.armright {
+    position: absolute;
+    transform: rotate(-140deg);
+    width: 200px;
+    height: 300px;
+    top: 0;
+    right: 0;
+}
+
 
